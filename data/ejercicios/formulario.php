@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Formulario</title>
 </head>
+
 <body>
     <form name="formulario" action="/autoriza.php" method="GET">
         <p>
@@ -37,7 +39,7 @@
             <input type="radio" name="equipo" id="equipo2" value="Burgos">
             <label for="equipo3">Obradoiro</label>
             <input type="radio" name="equipo" id="equipo3" value="Obradoiro">
-        
+
         </p>
 
         <p>Elige tu plato favorito: </p>
@@ -50,6 +52,8 @@
             </select>
         </p>
 
+        <input type="hidden" name="ip" value="<?= $_SERVER['SERVER_ADDR'] ?>">
+
         <p>Elige tus platos favoritos: </p>
         <p>
             <select name="menusm[]" id="menus" multiple=5>
@@ -59,8 +63,7 @@
                 <option value="brocoli">Brocoli</option>
             </select>
         </p>
-
-        <input type="submit" name="envio" id="envio" value="Enviar">
     </form>
 </body>
+
 </html>

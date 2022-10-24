@@ -1,0 +1,49 @@
+<!-- Crear una web en la que seleccionemos entre 3 idiomas: español, ingles y aleman
+y seleccionemos una marca de coche preferida de entre varias y muestre el siguiente mensaje:
+- Bienvenido querido usuario.
+- Welcome dear user.
+- Willkommen Sehr geehrter Nutzer.
+y la marca de coche seleccionada.
+Esta información se debe guardar en cookies.
+Si no se selecciona idioma por defecto será español. -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bienvenido/ Welcome /Willkommen</title>
+</head>
+
+<body>
+    <form name="formulario" action="/ejercicio19_10.php" method="POST">
+        <p>Elige tu idioma: </p>
+        <p>
+            <label for="idioma1">Español</label>
+            <input type="radio" name="idioma" id="idioma1" value="Espanol">
+            <label for="idioma2">Ingles</label>
+            <input type="radio" name="idioma" id="idioma2" value="Ingles">
+            <label for="idioma3">Aleman</label>
+            <input type="radio" name="idioma" id="idioma3" value="Aleman">
+
+        </p>
+
+        <p>Elige tu marca de coche preferida: </p>
+        <p>
+            <label for="marca1">Jaguar</label>
+            <input type="radio" name="marca" id="marca1" value="Jaguar">
+            <label for="marca2">Audi</label>
+            <input type="radio" name="marca" id="marca2" value="Audi">
+            <label for="marca3">Kia</label>
+            <input type="radio" name="marca" id="marca3" value="Kia">
+            <label for="marca4">Ferrari</label>
+            <input type="radio" name="marca" id="marca4" value="Ferrari">
+            <label for="marca5">Lexus</label>
+            <input type="radio" name="marca" id="marca5" value="Lexus">
+        </p>
+        <input type="submit" name="envio" id="envio" value="Enviar">
+    </form>
+</body>
+
+</html>

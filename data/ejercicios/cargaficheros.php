@@ -19,7 +19,7 @@
         $destino = "subidos/" . $_FILES["myfile"]["name"];
         $flag = move_uploaded_file($_FILES["myfile"]["tmp_name"], $destino);
 
-        echo $flag?"Fichero Subido Correctamente.":"Fallo en la subida.";
+        echo $flag ? "Fichero Subido Correctamente." : "Fallo en la subida.";
     } else {
         echo "<p>No has enviado ningún fichero.</p>";
     }

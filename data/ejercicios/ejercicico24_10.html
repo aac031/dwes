@@ -1,0 +1,38 @@
+<!-- Crear un entorno de login.
+    - La página de login: usuario y password (login.php)
+        - usuario = usuario
+        - password = 1234 => ok, rol = 0
+    
+        - usuario = admin
+        - password = 4567 => ok, rol = 1 
+    
+        - Si no ok => Muestra mensaje login incorrecto.
+        - Si login ok => principal.php "Bienvenido usuario"
+        - Enlace logout.php
+    - logout.php => Cerrar la sesión y enlace/redireccion a login.php -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio Clase 24/10</title>
+</head>
+
+<body>
+    <form name="formulario" action="/ejercicico24_10.html" method="POST">
+        <p>
+            <label for="usuario">Usuario: </label>
+            <input type="text" name="usuario" id="usuario">
+        </p>
+
+        <p>
+            <label for="password">Password: </label>
+            <input type="password" name="password" id="password">
+        </p>
+        <input type="submit" name="envio" id="envio" value="Enviar">
+    </form>
+</body>
+
+</html>

@@ -32,21 +32,21 @@ if (isset($_POST["envio"])) {
         if (isset($_POST["envio"])) {
             $idioma = $_POST["idioma"];
             switch ($idioma) {
-                case "Espanol":
+                case "es":
                     echo "<br>Tu idioma es: " . $idioma;
                     echo "<br>";
                     echo "<br><h1>Buenas :)</h1>";
                     echo "<br>";
                     break;
 
-                case "Ingles":
+                case "en":
                     echo "<br>Tu idioma es: " . $idioma;
                     echo "<br>";
                     echo "<br><h1>Welcome :O</h1>";
                     echo "<br>";
                     break;
 
-                case "Aleman":
+                case "de":
                     echo "<br>Tu idioma es: " . $idioma;
                     echo "<br>";
                     echo "<br><h1>Willkommen :D</h1>";

@@ -1,20 +1,12 @@
 <?php
 session_start();
 
-echo "<h2>Bienvenido: </h2>" . $_SESSION;
+if (!isset($_SESSION["login_ok"])) {
+    header("Location: login_2.php");
+}
+//var_dump($_SESSION["login_ok"]);
+echo "<h2>Bienvenido: </h2>" . $_SESSION["login_ok"]["nombreusu"];
+echo "<h2>El valor de tu rol es: </h2>" . $_SESSION["login_ok"]["rol"];
+echo "<br><br>";
+echo "<a href=\"logout_2.php\">Cerrar Sesión</a>";
 ?>
-
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-
-<body>
-    Haz click para <a href="logout_2.php" title="Logout">desconectarte
-</body>
-
-</html>

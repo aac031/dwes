@@ -10,9 +10,9 @@
 <body>
     <h1>Tabla Multiplicación</h1>
     <?php
-    if (isset($_GET['envio'])) {
-        if (!empty($_GET['numero'])) {
-            $tabla = $_GET['numero'];
+    if (isset($_POST['envio'])) {
+        if (!empty($_POST['numero'])) {
+            $tabla = $_POST['numero'];
             for ($tabla = 1; $tabla <= 10; $tabla++) {
                 echo 'Tabla del ' . $tabla . '<br />';
                 for ($x = 1; $x <= 10; $x++) {

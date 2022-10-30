@@ -1,3 +1,7 @@
+<?php
+    header('Refresh: 5; URL = /Trabajo_Evaluable_1/Ejercicio_01.html');
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -10,33 +14,33 @@
 <body>
     <h1>Datos Personales</h1>
     <?php
-    if (isset($_GET['envio'])) {
-        if (!empty($_GET['nombre'])) {
-            $nombre = $_GET['nombre'];
+    if (isset($_POST['envio'])) {
+        if (!empty($_POST['nombre'])) {
+            $nombre = $_POST['nombre'];
             echo "<br>El nombre introducido es: " . $nombre;
         } else {
             echo "<br><h3>No has introducido ningún nombre.</h3>";
         }
-        if (!empty($_GET['apellido'])) {
-            $apellido = $_GET['apellido'];
+        if (!empty($_POST['apellido'])) {
+            $apellido = $_POST['apellido'];
             echo "<br>El apellido introducido es: " . $apellido;
         } else {
             echo "<br><h3>No has introducido ningún apellido.</h3>";
         }
-        if (!empty($_GET['edad'])) {
-            $edad = $_GET['edad'];
+        if (!empty($_POST['edad'])) {
+            $edad = $_POST['edad'];
             echo "<br>La edad es: " . $edad;
         } else {
             echo "<br><h3>No has introducido ninguna edad.</h3>";
         }
-        if (!empty($_GET['telefono'])) {
-            $telefono = $_GET['telefono'];
+        if (!empty($_POST['telefono'])) {
+            $telefono = $_POST['telefono'];
             echo "<br>El teléfono introducido es: " . $telefono;
         } else {
             echo "<br><h3>No has introducido ningún teléfono.</h3>";
         }
-        if (!empty($_GET['email'])) {
-            $email = $_GET['email'];
+        if (!empty($_POST['email'])) {
+            $email = $_POST['email'];
             echo "<br>El email introducido es: " . $email;
         } else {
             echo "<br><h3>No has introducido ningún email.</h3>";

@@ -1,3 +1,7 @@
+<?php
+header('Refresh: 5; URL = /Trabajo_Evaluable_1/Ejercicio_02.html');
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -8,20 +12,18 @@
 </head>
 
 <body>
-    <h1>Tabla Multiplicación</h1>
+    <h2>Tabla Multiplicación</h2>
+    <hr>
     <?php
     if (isset($_POST['envio'])) {
         if (!empty($_POST['numero'])) {
-            $tabla = $_POST['numero'];
-            for ($tabla = 1; $tabla <= 10; $tabla++) {
-                echo 'Tabla del ' . $tabla . '<br />';
-                for ($x = 1; $x <= 10; $x++) {
-                    echo '[ ' . $tabla . ' * ' . $x . ' = ' . $tabla * $x . ' ] ';
+            for ($variable1 = $_POST['numero']; $variable1 <= $_POST['numero']; $variable1++) {
+                echo "Tabla del " . $variable1 . ":";
+                for ($variable2 = 1; $variable2 <= 10; $variable2++) {
+                    echo "<br>" . "(" . $variable1 . " x " . $variable2 . " = " . $variable1 * $variable2 . ")";
                 }
-                echo '<hr />';
+                echo "<hr>";
             }
-        } else {
-            echo "<br><h3>No has introducido ningún número.</h3>";
         }
     }
     ?>

@@ -37,7 +37,7 @@
     <?php
     if ($_SERVER["REQUEST_METHOD"] === "POST") {
         if (isset($_POST) && !empty($_POST)) {
-            echo "<b>Bienvenido:</b>";
+            echo "<b>Datos Introducidos:</b>";
             echo "<pre>";
             print_r($_POST);
             echo "<br>";

@@ -10,7 +10,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         $sesiondecodif = json_decode($sesioncodif, true);
         //var_dump($sesiondecodif);
 
-        $sesiondecodif = json_decode($sesiondecodif);
+        //$sesiondecodif = json_decode($sesiondecodif);
     }
 }
 

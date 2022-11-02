@@ -8,9 +8,19 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         var_dump($sesioncodif);
 
         $sesiondecodif = json_decode($sesioncodif, true);
+        echo "<br><br>";
+        //$_SESSION["listadeseo"][4] = "Porsche";
         //var_dump($sesiondecodif);
-
-        //$sesiondecodif = json_decode($sesiondecodif);
+        $sesiondecodif = json_decode($sesioncodif);
+        //var_dump($sesiondecodif);
+        //$sesiondecodif-> {'listadeseo'}[1] = "lampara";
+        //$this->metodo
+        //var_dump($sesiondecodif);
+        /*$miarray = get_object_vars($sesiondecodif);
+        print_r($miarray);
+        for ($i = 0; $i < count($miarray, COUNT_RECURSIVE); $i++) {
+            echo "<br>Elemento " . $i . " es: " . $miarray['listadeseo'][$i];
+        } */
     }
 }
 

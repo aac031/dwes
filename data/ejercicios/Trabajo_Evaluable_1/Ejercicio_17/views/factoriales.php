@@ -13,6 +13,11 @@
     require('views/header.php');
     ?>
     <h1>Factoriales en <?= $this->name ?></h1>
+    <hr>
+    <?php
+    
+    ?>
+    <hr>
 </body>
 
 </html>

@@ -1,12 +1,11 @@
 <?php
+$num1 = 0;
+$num2 = 1;
 
-function fibonacci($n){
-    $fibonacci = [0,1];
-
-    for($i=2; $i<=$n;$i++){
-        $fibonacci[] = $fibonacci[$i-1] + $fibonacci[$i-2];
-    }
-    echo $fibonacci[$n];
+echo $num1 . " ";
+for ($i = 0; $i < 10; $i++) {
+    $numTemp = $num1;
+    $num1 = $num2;
+    $num2 = $numTemp + $num1;
+    echo $num1 . " ";
 }
-
-fibonacci(10);

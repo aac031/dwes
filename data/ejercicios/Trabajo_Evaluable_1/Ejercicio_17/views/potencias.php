@@ -13,6 +13,11 @@
     require('views/header.php');
     ?>
     <h1>Potencias en <?= $this->name ?></h1>
+    <hr>
+    <?php
+    
+    ?>
+    <hr>
 </body>
 
 </html>

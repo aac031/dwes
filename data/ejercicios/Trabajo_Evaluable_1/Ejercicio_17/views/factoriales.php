@@ -14,8 +14,32 @@
     ?>
     <h1>Factoriales en <?= $this->name ?></h1>
     <hr>
+    <form action="" method="POST">
+        <p>
+            <label for="numero">Número: </label>
+            <input type="number" name="numero" id="numero" required>
+        </p>
+
+        <input type="submit" value="Enviar">
+    </form>
+    <hr>
     <?php
-    
+    function factorial($num)
+    {
+        $factorial = 1;
+        for ($i = 1; $i <= $num; $i++) {
+            $factorial = $factorial * $i;
+        }
+        return $factorial;
+    }
+
+    if ($_SERVER["REQUEST_METHOD"] === "POST") {
+        if (isset($_POST) && !empty($_POST)) {
+            $num = $_POST["numero"];
+            $resultado = factorial($num);
+            echo "El factorial de " . $num . " es igual a: " . $resultado;
+        }
+    }
     ?>
     <hr>
 </body>

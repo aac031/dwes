@@ -14,19 +14,38 @@
     ?>
     <h1>Fibonacci en <?= $this->name ?></h1>
     <hr>
-    <?php
+    <h3>Introduzca un número entero positivo: </h3>
+    <form action="" method="POST">
+        <p>
+            <label for="numero">Número: </label>
+            <input type="number" name="numero" id="numero" required>
+        </p>
 
-    function fibonacci($n)
+        <input type="submit" value="Enviar">
+    </form>
+    <hr>
+    <?php
+    function fibonacci($num)
     {
         $fibonacci = [0, 1];
 
-        for ($i = 2; $i <= $n; $i++) {
+        for ($i = 2; $i <= $num; $i++) {
             $fibonacci[] = $fibonacci[$i - 1] + $fibonacci[$i - 2];
         }
-        echo "Resultado: " . $fibonacci[$n];
+        return $fibonacci[$num];
     }
 
-    fibonacci(100);
+    if ($_SERVER["REQUEST_METHOD"] === "POST") {
+        if (isset($_POST) && !empty($_POST)) {
+            $num = $_POST["numero"];
+            if ($_POST["numero"] >= 0) {
+                $resultado = fibonacci($num);
+                echo "Resultado: " . $resultado;
+            } else {
+                echo "<b>El número introducido debe ser positivo.</b>";
+            }
+        }
+    }
     ?>
     <hr>
 </body>

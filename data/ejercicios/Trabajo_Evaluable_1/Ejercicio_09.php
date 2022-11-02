@@ -8,8 +8,6 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         echo "<pre>";
         print_r($sesioncodif);
         echo "</pre>";
-
-        $sesiondecodif = json_decode($sesioncodif, true);
     }
 }
 ?>

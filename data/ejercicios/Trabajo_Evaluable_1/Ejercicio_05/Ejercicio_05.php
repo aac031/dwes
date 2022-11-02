@@ -1,5 +1,5 @@
 <?php
-header('Refresh: 10; URL = /Trabajo_Evaluable_1/Ejercicio_05.html');
+header('Refresh: 10; URL = /Trabajo_Evaluable_1/Ejercicio_05/Ejercicio_05.html');
 ?>
 
 <!DOCTYPE html>

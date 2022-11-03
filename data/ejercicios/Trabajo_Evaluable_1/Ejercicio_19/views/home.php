@@ -12,15 +12,16 @@
     <?php
     require('header.php');
     ?>
-
     <?php
     if (isset($_COOKIE["usuario"])) {
         $usuario = $_COOKIE["usuario"];
         echo "<br><h2>Bienvenido, " . $_COOKIE["usuario"] . ":</h2>";
     }
     ?>
+
     <hr>
-    <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]) ?>" method="POST">
+
+    <form action="?method=new" method="POST">
         <h5>Agregar objeto a la lista de deseos:</h5>
         <label for="lista">Selecciona un objeto:</label>
         <select name="lista" id="lista" required>
@@ -32,7 +33,7 @@
             <option value="Tablet">Tablet</option>
         </select>
         <br><br>
-        <input type="submit" name="envio" value="Agregar">
+        <input type="submit" name="agregar" value="Agregar">
     </form>
 </body>
 

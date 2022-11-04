@@ -18,7 +18,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
                 exit();
             } else {
                 setcookie("usuario", '', time() - 7200);
-                header("Refresh:1; URL = /Trabajo_Evaluable_1/Ejercicio_19/");
+                header("Refresh:1; URL = /Trabajo_Evaluable_1/Ejercicio_19?method=login");
                 echo "<h2>Usuario y/o Contraseña incorrectos.</h2>";
                 echo "<h3>Intente otra vez...";
                 exit();

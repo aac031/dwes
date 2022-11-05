@@ -1,5 +1,5 @@
 <?php
-header('Refresh: 10; URL = /Trabajo_Evaluable_1/Ejercicio_02/formulario.html');
+header('Refresh: 10; URL = formulario.html');
 /* Usaremos "Refresh: 10" en header para mostrar la tabla de multiplicación
     durante 10 segundos, después de ese tiempo se regresará
     a la página de introducción de número. */

@@ -1,5 +1,5 @@
 <?php
-header('Refresh: 7; URL = /Trabajo_Evaluable_1/Ejercicio_01/formulario.html');
+header('Refresh: 7; URL = formulario.html');
 /* Usaremos "Refresh: 7" en header para mostrar la información de los datos enviados
     por el formulario durante un 7 segundos, después de ese tiempo se regresará
     a la página de introducción de datos. */

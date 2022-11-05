@@ -12,7 +12,7 @@ if (isset($_COOKIE["usuario"])) {
     //Si está dicha cookie, la eliminaremos.
     setcookie("usuario", $usuario, time() - 7200);
     //Nos redirigiremos a 'login'.
-    header('Refresh: 1; URL = /Trabajo_Evaluable_1/Ejercicio_19?method=login');
+    header('Refresh: 1; URL = ?method=login');
 
     echo "<h2>Cerrando sesión...</h2>";
 }

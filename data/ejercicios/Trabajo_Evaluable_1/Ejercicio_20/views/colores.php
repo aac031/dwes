@@ -1,11 +1,15 @@
 <?php
+//Si ya exite una cookie con algun valor (red, green o blue)...
 if (isset($_COOKIE["color"])) {
+    //con include cogemos la variable $color de 'cambio.php'
     include 'cambio.php';
     $color = $_COOKIE['color'];
+    //Cambiamos de color de fondo con 'background-color'...
     echo "<body style='background-color:$color'>";
 }
 ?>
 
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -15,6 +19,7 @@ if (isset($_COOKIE["color"])) {
 </head>
 
 <body>
+    <!-- El usuario seleccionará el color al que desea cambiar. -->
     <form action="?method=cambio" method="POST">
         <label for="color">Seleccion el color:</label>
         <select name="color">

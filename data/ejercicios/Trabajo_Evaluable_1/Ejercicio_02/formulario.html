@@ -1,0 +1,25 @@
+<!-- Ejercicio_02: Imprimir la tabla de multiplicar del 8. 
+    Será adaptada para otros números. -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Introduce número</title>
+</head>
+
+<body>
+    <!-- Pediremos un número al usuario que será obligatorio ("required"), que será enviado al servidor 
+    y le mostrará su tabla de multiplicación. -->
+    <form name="formulario" action="/Trabajo_Evaluable_1/Ejercicio_02/tabla.php" method="POST">
+        <p>
+            <label for="numero">Número: </label>
+            <input type="number" name="numero" id="numero" required>
+        </p>
+        <!-- Enviamos el número -->
+        <input type="submit" name="envio" id="envio" value="Enviar">
+    </form>
+</body>
+
+</html>

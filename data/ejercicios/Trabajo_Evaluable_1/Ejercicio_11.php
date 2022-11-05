@@ -1,3 +1,5 @@
+<!-- Ejercicio_11: Crea un formulario para enviar los datos 
+de registro de un libro: título, autor, editorial, páginas.  -->
 <!DOCTYPE html>
 <html lang="en">
 
@@ -8,9 +10,11 @@
 </head>
 
 <body>
+    <!-- Enviar datos de registro de un libro. 
+    Y luego mostrarlos por pantalla. -->
     <hr>
     <h1>Registro de libro</h1>
-    <form action="" method="POST">
+    <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]) ?>" method="POST">
         <p>
             <label for="titulo">Título: </label>
             <input type="text" name="Titulo" id="titulo" required>
@@ -38,9 +42,11 @@
     if ($_SERVER["REQUEST_METHOD"] === "POST") {
         if (isset($_POST) && !empty($_POST)) {
             echo "<b>Datos Introducidos:</b>";
+            /* Mostramos los datos introducidos. */
             echo "<pre>";
             print_r($_POST);
             echo "<br>";
+            /* Volvemos al inicio para introducir otros datos. */
             echo "<a href=\"Ejercicio_11.php\">Introduce otros datos...</a>";
         }
     }

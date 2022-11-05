@@ -1,8 +1,11 @@
 <?php
+//Comprobamos o creamos la sesión
 session_start();
 if (!isset($_SESSION['color'])) {
+    //Si no existe no hará ningún cambio en la página.
 } else {
     $color = $_SESSION['color'];
+    //Cambiamos de color de fondo con 'background-color'...
     echo "<body style='background-color: $color'>";
 }
 ?>
@@ -17,6 +20,7 @@ if (!isset($_SESSION['color'])) {
 </head>
 
 <body>
+    <!-- El usuario seleccionará el color al que desea cambiar. -->
     <form action="?method=cambio" method="POST">
         <label for="color">Seleccion el color:</label>
         <select name="color">

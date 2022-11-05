@@ -1,9 +1,12 @@
 <?php
+//Comprobamos o creamos la sesión...
 session_start();
 if (!isset($_SESSION['color'])) {
+    //Si no existe la sesión nos redirigiremos a 'colores.php'.
     header("Location: ?method=colores");
 } else {
     $color = $_SESSION['color'];
+    //Si la sesión existe cambiaremos de color a la página.
     echo "<body style='background-color: $color'>";
 }
 ?>
@@ -18,6 +21,7 @@ if (!isset($_SESSION['color'])) {
 </head>
 
 <body>
+    <!-- Mostramos un mensaje de bienvenida. -->
     <h1>Bievenido</h1>
     <hr>
     <form action="?method=colores" method="POST">

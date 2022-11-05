@@ -1,39 +1,46 @@
+<!-- Ejercicio_01: Imprimir una ficha con tus datos personales guardados 
+    en variables (nombre, apellidos, edad, teléfono, email, ...). -->
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Datos Personales</title>
+    <title>Formulario</title>
 </head>
 
 <body>
-    <form name="formulario" action="/Trabajo_Evaluable_1/Ejercicio_01/Ejercicio_01.php" method="POST">
+    <!-- Enviaremos los valores de (nombre, apellido, edad, telefono, email) al servidor -->
+    <!-- Todos los datos del formulario serán enviados por el método POST. -->
+    <form name="formulario" action="/Trabajo_Evaluable_1/Ejercicio_01/home.php" method="POST">
+        <!-- Nombre del usuario 
+        Añadiremos "required" para que sea un campo obligatorio. -->
         <p>
             <label for="nombre">Nombre: </label>
             <input type="text" name="nombre" id="nombre" required>
         </p>
-
+        <!-- Apellido del usuario 
+        Añadiremos "required" para que sea un campo obligatorio. -->
         <p>
             <label for="apellido">Apellido: </label>
             <input type="text" name="apellido" id="apellido" required>
         </p>
-
+        <!-- Edad del usuario -->
         <p>
             <label for="edad">Edad: </label>
             <input type="number" name="edad" id="edad">
         </p>
-
+        <!-- Teléfono del usuario -->
         <p>
             <label for="telefono">Teléfono: </label>
             <input type="tel" name="telefono" id="telefono">
         </p>
-
+        <!-- Email de usuario -->
         <p>
             <label for="email">Email: </label>
             <input type="email" name="email" id="email">
         </p>
-
+        <!-- Todo será enviado al servidor por el input Enviar -->
         <input type="submit" name="envio" id="envio" value="Enviar">
     </form>
 </body>

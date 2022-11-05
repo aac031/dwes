@@ -10,9 +10,11 @@
 
 <body>
     <?php
+    //Una vez creada la cookie y accedido sin problemas, veremos el header de la página
     require('header.php');
     ?>
     <?php
+    //Mostraremos un mensaje de bienvenida.
     if (isset($_COOKIE["usuario"])) {
         $usuario = $_COOKIE["usuario"];
         echo "<br><h2>Bienvenido, " . $_COOKIE["usuario"] . ":</h2>";
@@ -20,7 +22,7 @@
     ?>
 
     <hr>
-
+    <!-- El usuario podrá añadir elementos a su lista de deseo. -->
     <form action="?method=new" method="POST">
         <h5>Agregar objeto a la lista de deseos:</h5>
         <label for="lista">Selecciona un objeto:</label>

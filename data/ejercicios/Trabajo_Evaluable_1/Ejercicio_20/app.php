@@ -1,5 +1,5 @@
 <?php
-
+//Creamos la clase App...
 class App
 {
     public function __construct($name = "Aplicación WEB")
@@ -7,6 +7,7 @@ class App
         $this->name = $name;
     }
 
+    //La aplicación iniciará el método 'home'
     public function run()
     {
         if (isset($_GET['method'])) {
@@ -14,37 +15,24 @@ class App
         } else {
             $method = 'home';
         }
-
-        try {
-            $this->$method();
-        } catch (\Throwable $th) {
-            if (method_exists($this, $method)) {
-                header("HTTP/1.0 500 Internal Server Error");
-                return http_response_code(500);
-                echo "Error en el servidor.";
-            } else {
-                header("HTTP/1.0 404 Not Found");
-                echo "No encontrado.";
-            }
-        } finally {
-            echo "<pre>";
-            print_r($th);
-        }
+        $this->$method();
     }
 
+    //Función para 'home.php'.
     public function home()
     {
         include('views/home.php');
     }
 
+    //Función para 'colores.php'.
     public function colores()
     {
         include('views/colores.php');
     }
 
+    //Función para 'cambio.php'.
     public function cambio()
     {
         include('views/cambio.php');
     }
-
 }

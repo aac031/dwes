@@ -1,9 +1,13 @@
 <?php
+//Si ya existe una cookie con algun valor (red, green o blue)...
 if (isset($_COOKIE["color"])) {
+    //con include cogemos la variable $color de 'cambio.php'
     include 'cambio.php';
     $color = $_COOKIE['color'];
+    //Cambiamos de color de fondo con 'background-color'...
     echo "<body style='background-color:$color'>";
 } else {
+    //Si no existe la cookie nos redirigiremos a 'colores.php'
     header("Location: ?method=colores");
 }
 ?>
@@ -18,6 +22,7 @@ if (isset($_COOKIE["color"])) {
 </head>
 
 <body>
+    <!-- Mostramos un mensaje de bienvenida. -->
     <h1>Bievenido</h1>
     <hr>
     <form action="?method=colores" method="POST">

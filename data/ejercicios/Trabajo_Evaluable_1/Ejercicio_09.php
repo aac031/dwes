@@ -1,12 +1,16 @@
 <?php
+/* Ejercicio_09: Repite el ejercicio 7 añadiendo los elementos al array de uno en uno. */
+/* Comprobamos que recibe los datos. */
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
     if (isset($_POST["envio"])) {
+        /* Iniciamos una sesión para guardas la lista. */
         session_start();
         $pais = $_POST["lista"];
+        /* Lo que el usuario selecciona se irá añadiendo a la lista. */
         $_SESSION["listaPaises"][] = $pais;
-        $sesioncodif = json_encode($_SESSION);
         echo "<pre>";
-        print_r($sesioncodif);
+        /* Mostramos la lista por pantalla. */
+        print_r($_SESSION["listaPaises"]);
         echo "</pre>";
     }
 }
@@ -22,6 +26,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 </head>
 
 <body>
+    <!-- Creamos un select para que el usuario seleccione el país que desea añadir al array. -->
     <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]) ?>" method="POST">
         <select name="lista" id="lista" required>
             <option value="Espagna">España</option>

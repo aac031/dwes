@@ -1,5 +1,6 @@
 <?php
 
+//Creamos la clase App...
 class App
 {
     public function __construct($name = "Aplicación WEB")
@@ -7,6 +8,7 @@ class App
         $this->name = $name;
     }
 
+    //La aplicación iniciará el método 'index'
     public function run()
     {
         if (isset($_GET['method'])) {
@@ -14,44 +16,34 @@ class App
         } else {
             $method = 'index';
         }
-
-        try {
-            $this->$method();
-        } catch (\Throwable $th) {
-            if (method_exists($this, $method)) {
-                header("HTTP/1.0 500 Internal Server Error");
-                return http_response_code(500);
-                echo "Error en el servidor.";
-            } else {
-                header("HTTP/1.0 404 Not Found");
-                echo "No encontrado.";
-            }
-        } finally {
-            echo "<pre>";
-            print_r($th);
-        }
+        $this->$method();
     }
 
+    //Función para 'index.php'.
     public function index()
     {
         include('views/index.php');
     }
 
+    //Función para 'fibonacci.php'.
     public function fibonacci()
     {
         include('views/fibonacci.php');
     }
 
+    //Función para 'factoriales.php'.
     public function factoriales()
     {
         include('views/factoriales.php');
     }
 
+    //Función para 'primos.php'.
     public function primos()
     {
         include('views/primos.php');
     }
 
+    //Función para 'potencias.php'.
     public function potencias()
     {
         include('views/potencias.php');

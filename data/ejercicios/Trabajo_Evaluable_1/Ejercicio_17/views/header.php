@@ -1,3 +1,4 @@
+<!-- Creamos un header que será llamado por todas las páginas de la app. -->
 <header>
     <ul>
         <li><a href="/Trabajo_Evaluable_1/Ejercicio_17?method=index">Inicio</a></li>

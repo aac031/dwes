@@ -1,0 +1,25 @@
+<!-- Ejercicio_05: Mostrar todos los divisores de un número. 
+    Si no los hay decir que el número es primo. -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabla Multiplicar</title>
+</head>
+
+<body>
+    <!-- Pediremos un número al usuario que será obligatorio ("required"), será enviado al servidor 
+    y le mostrará sus divisores o si es primo. -->
+    <form name="formulario" action="/Trabajo_Evaluable_1/Ejercicio_05/divisores.php" method="POST">
+        <p>
+            <label for="numero">Número: </label>
+            <input type="number" name="numero" min="1" required>
+        </p>
+
+        <input type="submit" name="envio" id="envio" value="Enviar">
+    </form>
+</body>
+
+</html>
